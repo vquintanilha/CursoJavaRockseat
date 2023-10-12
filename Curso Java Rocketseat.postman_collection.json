@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Victor Quintanilha\",\r\n    \"username\": \"victorquintanilha\",\r\n    \"password\": \"123\"\r\n}",
+					"raw": "{\r\n    \"username\": \"victorquintanilha\",\r\n    \"name\": \"Victor Quintanilha\",\r\n    \"password\": \"1234\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -29,6 +29,50 @@
 					"port": "8080",
 					"path": [
 						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST de tasks",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "victorquintanilha",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Gravação de aula\",\r\n    \"description\": \"Tarefa para gravar aula de tasks do curso de Spring Boot\",\r\n    \"priority\": \"ALTA\",\r\n    \"startAt\": \"2023-10-06T12:30:00\",\r\n    \"endAt\": \"2023-10-06T15:35:00\",\r\n    \"idUser\": \"fa457365-3752-4057-971f-68bcc26dadad\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
 						""
 					]
 				}
