@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "POST de usuário",
+			"name": "POST de user",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -36,19 +36,19 @@
 			"response": []
 		},
 		{
-			"name": "POST de tasks",
+			"name": "POST de task",
 			"request": {
 				"auth": {
 					"type": "basic",
 					"basic": [
 						{
-							"key": "password",
-							"value": "1234",
+							"key": "username",
+							"value": "victorquintanilha",
 							"type": "string"
 						},
 						{
-							"key": "username",
-							"value": "victorquintanilha",
+							"key": "password",
+							"value": "1234",
 							"type": "string"
 						}
 					]
@@ -57,7 +57,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Gravação de aula\",\r\n    \"description\": \"Tarefa para gravar aula de tasks do curso de Spring Boot\",\r\n    \"priority\": \"ALTA\",\r\n    \"startAt\": \"2023-10-06T12:30:00\",\r\n    \"endAt\": \"2023-10-06T15:35:00\",\r\n    \"idUser\": \"fa457365-3752-4057-971f-68bcc26dadad\"\r\n}\r\n",
+					"raw": "{\r\n    \"title\": \"Gravação de aula\",\r\n    \"description\": \"Tarefa para gravar aula de tasks do curso de Spring Boot\",\r\n    \"priority\": \"ALTA\",\r\n    \"startAt\": \"2023-10-16T12:30:00\",\r\n    \"endAt\": \"2023-10-16T15:35:00\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -74,6 +74,85 @@
 					"path": [
 						"tasks",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET de tasks",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "victorquintanilha",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tasks/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE de task",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "victorquintanilha",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Mudança de título\",\r\n    \"priority\": \"MEDIA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tasks/321af291-495e-4f5b-a674-5dd3188f5091",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tasks",
+						"321af291-495e-4f5b-a674-5dd3188f5091"
 					]
 				}
 			},
