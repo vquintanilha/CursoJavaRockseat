@@ -1,2 +1,2 @@
-# CursoJavaRockseat
-Repositório criado para os arquivos gerados no curso de Java da Rockseat
+# JavaRockseat
+Codes developed during the online course of Java on Rocketseat
